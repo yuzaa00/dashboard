@@ -15,5 +15,13 @@ const getOrders: Parameters<typeof rest.get>[1] = async (_, res, ctx) => {
   return res(ctx.status(200), ctx.json({ orders: data }));
 };
 
-const postOrder: Parameters<typeof rest.post>[1] = (_, res, ctx) => {};
-const deleteOrder: Parameters<typeof rest.delete>[1] = (_, res, ctx) => {};
+const postOrder: Parameters<typeof rest.post>[1] = async (req, res, ctx) => {
+  const request = await req.json();
+
+  return res(ctx.status(200), ctx.json({ order: request.data }));
+};
+const deleteOrder: Parameters<typeof rest.delete>[1] = async (req, res, ctx) => {
+  const request = await req.json();
+
+  return res(ctx.status(200), ctx.json(request));
+};
