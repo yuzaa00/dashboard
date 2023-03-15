@@ -231,6 +231,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.13.10":
+  version: 7.21.0
+  resolution: "@babel/runtime@npm:7.21.0"
+  dependencies:
+    regenerator-runtime: ^0.13.11
+  checksum: 7b33e25bfa9e0e1b9e8828bb61b2d32bdd46b41b07ba7cb43319ad08efc6fda8eb89445193e67d6541814627df0ca59122c0ea795e412b99c5183a0540d338ab
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.20.7":
   version: 7.20.7
   resolution: "@babel/template@npm:7.20.7"
@@ -642,6 +651,116 @@ __metadata:
     tiny-glob: ^0.2.9
     tslib: ^2.4.0
   checksum: 118a1971120253740121a1db0a6658c21195b7da962acf9c124b507a3df707cfc97b0b84a16edcbd4352853b182e8337da9fc6e8e3d06c60d75ae4fb42321c75
+  languageName: node
+  linkType: hard
+
+"@radix-ui/primitive@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@radix-ui/primitive@npm:1.0.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+  checksum: 72996afaf346ec4f4c73422f14f6cb2d0de994801ba7cbb9a4a67b0050e0cd74625182c349ef8017ccae1406579d4b74a34a225ef2efe61e8e5337decf235deb
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-compose-refs@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@radix-ui/react-compose-refs@npm:1.0.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+  checksum: fb98be2e275a1a758ccac647780ff5b04be8dcf25dcea1592db3b691fecf719c4c0700126da605b2f512dd89caa111352b9fad59528d736b4e0e9a0e134a74a1
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-context@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@radix-ui/react-context@npm:1.0.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+  checksum: 43c6b6f2183398161fe6b109e83fff240a6b7babbb27092b815932342a89d5ca42aa9806bfae5927970eed5ff90feed04c67aa29c6721f84ae826f17fcf34ce0
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-form@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@radix-ui/react-form@npm:0.0.2"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/primitive": 1.0.0
+    "@radix-ui/react-compose-refs": 1.0.0
+    "@radix-ui/react-context": 1.0.0
+    "@radix-ui/react-id": 1.0.0
+    "@radix-ui/react-label": 2.0.1
+    "@radix-ui/react-primitive": 1.0.2
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 16930dd4dce4d2fc1835ac3017e0509ae1217bd0cbace1ee02b60c5d506a6143b8eab10658524f29bb99498ab8ca609f3521215fd594a82eb54a5f32bef27f33
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-id@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@radix-ui/react-id@npm:1.0.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-use-layout-effect": 1.0.0
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+  checksum: ba323cedd6a6df6f6e51ed1f7f7747988ce432b47fd94d860f962b14b342dcf049eae33f8ad0b72fd7df6329a7375542921132271fba64ab0a271c93f09c48d1
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-label@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@radix-ui/react-label@npm:2.0.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-primitive": 1.0.2
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 060783add530507eec906481c5a0c5ef58921435c27726b249bbb95d6d0fb915246880a003388be2ba06420132dcd425167f83b1d76b07dd3c9d8c74c4111b60
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-primitive@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@radix-ui/react-primitive@npm:1.0.2"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-slot": 1.0.1
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  checksum: 070b1770749eb629425ef959c4cdbd86957b83c5286ae4423e55ab1a89fa286a51f5aeee44e3a13eb6ca44771415ac1acbaeb0ba03013b49ecb5253e1a5a8996
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-slot@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@radix-ui/react-slot@npm:1.0.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@radix-ui/react-compose-refs": 1.0.0
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+  checksum: a20693f8ce532bd6cbff12ba543dfcf90d451f22923bd60b57dc9e639f6e53348915e182002b33444feb6ab753434e78e2a54085bf7092aadda4418f0423763f
+  languageName: node
+  linkType: hard
+
+"@radix-ui/react-use-layout-effect@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@radix-ui/react-use-layout-effect@npm:1.0.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+  peerDependencies:
+    react: ^16.8 || ^17.0 || ^18.0
+  checksum: fcdc8cfa79bd45766ebe3de11039c58abe3fed968cb39c12b2efce5d88013c76fe096ea4cee464d42576d02fe7697779b682b4268459bca3c4e48644f5b4ac5e
   languageName: node
   linkType: hard
 
@@ -1485,6 +1604,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dashboard@workspace:."
   dependencies:
+    "@radix-ui/react-form": ^0.0.2
     "@stitches/react": ^1.2.8
     "@types/react": ^18.0.27
     "@types/react-dom": ^18.0.10
@@ -3858,6 +3978,13 @@ __metadata:
   dependencies:
     picomatch: ^2.2.1
   checksum: 1ced032e6e45670b6d7352d71d21ce7edf7b9b928494dcaba6f11fba63180d9da6cd7061ebc34175ffda6ff529f481818c962952004d273178acd70f7059b320
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "regenerator-runtime@npm:0.13.11"
+  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 
