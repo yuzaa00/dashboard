@@ -1,6 +1,6 @@
 import { styled } from '../../../stitches.config';
 
-export const inputStyles = {
+export const Input = styled('input', {
   all: 'unset',
   boxSizing: 'border-box',
   width: '100%',
@@ -10,23 +10,19 @@ export const inputStyles = {
   borderRadius: '4px',
   fontSize: '15px',
   color: '$gray12',
-  boxShadow: `0 0 0 1px $colors$gray8`,
-  '&:hover': {
-    boxShadow: '0 0 0 1px $colors$indigo6',
-  },
-  '&:focus': {
-    boxShadow: '0 0 0 2px $colors$indigo7',
-  },
-  '&:selection': {
-    backgroundColor: '$indigo8',
-    color: '$gray12',
-  },
-};
-
-export const Input = styled('input', {
-  ...inputStyles,
-
+  boxShadow: '0 0 0 1px $colors$gray8',
   padding: '0 10px',
   height: '35px',
   lineHeight: 1,
+
+  '&:not(:disabled):hover': {
+    boxShadow: '0 0 0 1px $colors$indigo6',
+  },
+  '&:not(:disabled):focus': {
+    boxShadow: '0 0 0 2px $colors$indigo7',
+  },
+  '&:disabled': {
+    backgroundColor: '$gray4',
+    cursor: 'not-allowed',
+  },
 });
