@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.11",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-dialog": "^1.0.3",
     "@radix-ui/react-form": "^0.0.2",
@@ -20,7 +21,8 @@
     "react-datepicker": "^4.10.0",
     "react-daum-postcode": "^3.1.1",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.43.5"
+    "react-hook-form": "^7.43.5",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

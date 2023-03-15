@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@hookform/resolvers", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:2.9.11"],\
             ["@radix-ui/colors", "npm:0.1.8"],\
             ["@radix-ui/react-dialog", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.0.3"],\
             ["@radix-ui/react-form", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.0.2"],\
@@ -56,7 +57,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:18.2.0"],\
             ["react-hook-form", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:7.43.5"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
-            ["vite", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.1.4"]\
+            ["vite", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.1.4"],\
+            ["zod", "npm:3.21.4"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -663,6 +665,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
           "packageDependencies": [\
             ["@gar/promisify", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@hookform/resolvers", [\
+        ["npm:2.9.11", {\
+          "packageLocation": "./.yarn/cache/@hookform-resolvers-npm-2.9.11-7f3666c2a7-977ea038bb.zip/node_modules/@hookform/resolvers/",\
+          "packageDependencies": [\
+            ["@hookform/resolvers", "npm:2.9.11"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:2.9.11", {\
+          "packageLocation": "./.yarn/__virtual__/@hookform-resolvers-virtual-b1ceae56a3/0/cache/@hookform-resolvers-npm-2.9.11-7f3666c2a7-977ea038bb.zip/node_modules/@hookform/resolvers/",\
+          "packageDependencies": [\
+            ["@hookform/resolvers", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:2.9.11"],\
+            ["@types/react-hook-form", null],\
+            ["react-hook-form", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:7.43.5"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-hook-form",\
+            "react-hook-form"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2465,6 +2489,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["dashboard", "workspace:."],\
+            ["@hookform/resolvers", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:2.9.11"],\
             ["@radix-ui/colors", "npm:0.1.8"],\
             ["@radix-ui/react-dialog", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.0.3"],\
             ["@radix-ui/react-form", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.0.2"],\
@@ -2493,7 +2518,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:18.2.0"],\
             ["react-hook-form", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:7.43.5"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
-            ["vite", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.1.4"]\
+            ["vite", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.1.4"],\
+            ["zod", "npm:3.21.4"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6590,6 +6616,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yocto-queue-npm-0.1.0-c6c9a7db29-f77b3d8d00.zip/node_modules/yocto-queue/",\
           "packageDependencies": [\
             ["yocto-queue", "npm:0.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["zod", [\
+        ["npm:3.21.4", {\
+          "packageLocation": "./.yarn/cache/zod-npm-3.21.4-9f570b215c-f185ba8734.zip/node_modules/zod/",\
+          "packageDependencies": [\
+            ["zod", "npm:3.21.4"]\
           ],\
           "linkType": "HARD"\
         }]\
