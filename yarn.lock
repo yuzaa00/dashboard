@@ -1659,6 +1659,7 @@ __metadata:
     prettier: ^2.8.4
     react: ^18.2.0
     react-datepicker: ^4.10.0
+    react-daum-postcode: ^3.1.1
     react-dom: ^18.2.0
     react-hook-form: ^7.43.5
     typescript: ^4.9.3
@@ -3985,6 +3986,15 @@ __metadata:
     react: ^16.9.0 || ^17 || ^18
     react-dom: ^16.9.0 || ^17 || ^18
   checksum: d3e433e35a80308fe0c12d97a6d27148c5d31cc5a640d26da77c50ceff71541b1809b86372ad9d0e53aa4795fe50bb544c0f26f17ef2223cca0682089fe29450
+  languageName: node
+  linkType: hard
+
+"react-daum-postcode@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "react-daum-postcode@npm:3.1.1"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: a7097f7b57d4d4f7e5e96215c041986b6f2e1daa3fd413e7dae9877c726fe0991e3f4fbff44091e77ac461cf7bd8204db99534702cd7d8f1e52c002d144d1ae8
   languageName: node
   linkType: hard
 
