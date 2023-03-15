@@ -10,7 +10,11 @@ interface BasicFormProps {
 }
 
 export const BasicForm: FC<BasicFormProps> = ({ label }) => {
-  const { register } = useFormContext();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+  console.log(errors[label]?.message);
 
   return (
     <FormField name={FormLabelText[label]}>

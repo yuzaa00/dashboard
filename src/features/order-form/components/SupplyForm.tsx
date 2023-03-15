@@ -14,7 +14,7 @@ export const SupplyForm = () => {
       <FormLabel>물량</FormLabel>
       <StyledFormGrid>
         <HStack css={{ gap: 10 }}>
-          <Select {...register('supply', { required: true })}>
+          <Select {...register('supply')}>
             <option value="">선택</option>
             <option>PLT</option>
             <option>BOX</option>

@@ -1,11 +1,12 @@
-import { indigo, gray } from '@radix-ui/colors';
+import { indigo, gray, blackA } from '@radix-ui/colors';
 import { createStitches } from '@stitches/react';
 
-export const { styled, globalCss } = createStitches({
+export const { styled, globalCss, keyframes } = createStitches({
   theme: {
     colors: {
       ...indigo,
       ...gray,
+      ...blackA,
     },
   },
 });
