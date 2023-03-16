@@ -1,20 +1,19 @@
 import { Fragment } from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import { styled } from '../../../stitches.config';
-import { HStack } from '../../common/components/Stack';
 import { FormLabelEnum } from '../schema';
 import { LoadPlace } from './LoadPlace';
 
 const MAX_LOAD_PLACES_COUNT = 3;
 
 export const LoadPlacesForm = () => {
-  const { fields, append } = useFieldArray({ name: FormLabelEnum.LOAD_PLACE });
+  const { fields, append, remove } = useFieldArray({ name: FormLabelEnum.LOAD_PLACE });
 
   return (
     <GridLayout>
       {fields.map((field, index) => (
         <Fragment key={field.id}>
-          <LoadPlace index={index} fieldName={FormLabelEnum.LOAD_PLACE} />
+          <LoadPlace index={index} fieldName={FormLabelEnum.LOAD_PLACE} remove={remove} />
         </Fragment>
       ))}
       {fields.length < MAX_LOAD_PLACES_COUNT && (

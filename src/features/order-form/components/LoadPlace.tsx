@@ -1,5 +1,6 @@
+import { Cross1Icon } from '@radix-ui/react-icons';
 import { FC } from 'react';
-import { useFormContext } from 'react-hook-form';
+import { UseFieldArrayRemove, useFormContext } from 'react-hook-form';
 import { styled } from '../../../stitches.config';
 import { AddressModal } from '../../common/components/AddressModal';
 import { FormField, FormInput, FormLabel, FormMessage } from '../../common/components/Form';
@@ -10,9 +11,10 @@ import { InputDatePicker } from './InputDatePicker';
 interface LoadPlaceProps {
   index: number;
   fieldName: FormLabelEnum.LOAD_PLACE;
+  remove: UseFieldArrayRemove;
 }
 
-export const LoadPlace: FC<LoadPlaceProps> = ({ index, fieldName }) => {
+export const LoadPlace: FC<LoadPlaceProps> = ({ index, fieldName, remove }) => {
   const {
     register,
     formState: { errors },
@@ -20,7 +22,10 @@ export const LoadPlace: FC<LoadPlaceProps> = ({ index, fieldName }) => {
 
   return (
     <GridLayout>
-      <Header>상차지 정보</Header>
+      <Header>
+        상차지 정보
+        {index > 0 && <Cross1Icon onClick={() => remove(index)} />}
+      </Header>
       <FormField name="담당자" display="flex">
         <FormLabel display="flex">담당자</FormLabel>
         <FormInput display="flex">
@@ -63,6 +68,8 @@ const GridLayout = styled('div', {
 });
 
 const Header = styled('p', {
+  display: 'flex',
+  justifyContent: 'space-between',
   fontSize: '18px',
   marginBottom: '12px',
 });
