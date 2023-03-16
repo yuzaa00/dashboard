@@ -20,5 +20,5 @@ export const PhoneNumberForm = () => {
     setValue('phoneNumber', targetValue);
   };
 
-  return <BasicForm label={FormLabelEnum.PHONENUMBER} onChange={handleChange} maxLength={13} />;
+  return <BasicForm label={FormLabelEnum.PHONE_NUMBER} onChange={handleChange} maxLength={13} />;
 };

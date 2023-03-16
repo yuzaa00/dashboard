@@ -3,21 +3,33 @@ import { formMessages } from '../common/constant';
 
 export enum FormLabelEnum {
   NAME = 'name',
-  PHONENUMBER = 'phoneNumber',
-  FROMDATE = 'fromDate',
-  TODATE = 'toDate',
+  PHONE_NUMBER = 'phoneNumber',
+  FROM_DATE = 'fromDate',
+  TO_DATE = 'toDate',
   ITEM = 'item',
   ITEM_DETAIL = 'itemDetail',
   SUPPLY = 'supply',
   SUPPLY_DETAIL = 'supplyDetail',
   ADDRESS = 'address',
+  DATE = 'date',
+  LOAD_PLACE = 'loadPlace',
 }
 
 export const FormLabelText: { [key: string]: string } = {
   name: '이름',
   phoneNumber: '휴대폰 번호',
   address: '출근지',
+  date: '날짜',
 } as const;
+
+export const LoadPlaceSchema = z.object({
+  name: z
+    .string()
+    .min(1, formMessages.REQUIRED)
+    .regex(/^[ㄱ-ㅎ가-힣a-zA-Z\s]*$/, formMessages.NAME_INVALID),
+  date: z.date({ required_error: formMessages.REQUIRED }),
+  address: z.string().min(1, formMessages.REQUIRED),
+});
 
 export const OrderFormSchema = z.object({
   name: z
@@ -42,6 +54,7 @@ export const OrderFormSchema = z.object({
     .safe()
     .optional(),
   address: z.string().min(1, formMessages.REQUIRED),
+  loadPlace: z.array(LoadPlaceSchema),
 });
 
 export type OrderForm = z.infer<typeof OrderFormSchema>;

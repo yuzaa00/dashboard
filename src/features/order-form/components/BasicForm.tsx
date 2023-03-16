@@ -5,7 +5,7 @@ import { FormLabelEnum, FormLabelText } from '../schema';
 import { FormField, FormInput, FormLabel, FormMessage } from '../../common/components/Form';
 
 interface BasicFormProps {
-  label: FormLabelEnum.NAME | FormLabelEnum.PHONENUMBER | FormLabelEnum.ADDRESS;
+  label: FormLabelEnum.NAME | FormLabelEnum.PHONE_NUMBER | FormLabelEnum.ADDRESS;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 

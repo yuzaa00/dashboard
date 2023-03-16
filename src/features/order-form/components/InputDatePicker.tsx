@@ -3,11 +3,10 @@ import { Input } from '../../common/components/Input';
 import { FC } from 'react';
 import { ko } from 'date-fns/esm/locale';
 import { Controller, useFormContext } from 'react-hook-form';
-import { FormLabelEnum } from '../schema';
 import 'react-datepicker/dist/react-datepicker.css';
 
 interface InputDatePickerProps {
-  label: FormLabelEnum.FROMDATE | FormLabelEnum.TODATE;
+  label: string;
   minDate?: Date;
 }
 
