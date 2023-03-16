@@ -1,53 +1,44 @@
-import { styled } from '../../../stitches.config';
-import * as Form from '@radix-ui/react-form';
 import { Input } from '../../common/components/Input';
 import { Select } from '../../common/components/Select';
 import { HStack } from '../../common/components/Stack';
 import { useFormContext } from 'react-hook-form';
+import { FormField, FormInput, FormLabel, FormMessage } from '../../common/components/Form';
+import { FormLabelEnum } from '../schema';
 
 export const SupplyForm = () => {
-  const { register, watch } = useFormContext();
-  const watchSupply = watch('supply');
+  const {
+    register,
+    watch,
+    formState: { errors },
+  } = useFormContext();
+
+  const watchSupply = watch(FormLabelEnum.SUPPLY);
+  const errorMessage =
+    !!watchSupply &&
+    (errors[FormLabelEnum.SUPPLY]?.message || errors[FormLabelEnum.SUPPLY_DETAIL]?.message);
 
   return (
     <FormField name="물량">
       <FormLabel>물량</FormLabel>
-      <StyledFormGrid>
+      <FormInput>
         <HStack css={{ gap: 10 }}>
-          <Select {...register('supply')}>
+          <Select {...register(FormLabelEnum.SUPPLY)}>
             <option value="">선택</option>
             <option>PLT</option>
             <option>BOX</option>
             <option>EA</option>
           </Select>
           <Input
-            {...register('supplyDetail', {
-              required: true,
+            type="number"
+            {...register(FormLabelEnum.SUPPLY_DETAIL, {
+              valueAsNumber: true,
+              required: !!watchSupply,
               disabled: !watchSupply,
             })}
           />
         </HStack>
-      </StyledFormGrid>
+        {errorMessage && <FormMessage message={errorMessage as string} />}
+      </FormInput>
     </FormField>
   );
 };
-
-export const FormField = styled(Form.Field, {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(12, 1fr)',
-  marginBottom: '16px',
-});
-
-export const FormLabel = styled(Form.Label, {
-  gridColumn: '1 / 3',
-  padding: '0 10px',
-
-  fontSize: '16px',
-  fontWeight: 700,
-  lineHeight: '35px',
-  color: '$gray12',
-});
-
-export const StyledFormGrid = styled('div', {
-  gridColumn: '3 / 13',
-});

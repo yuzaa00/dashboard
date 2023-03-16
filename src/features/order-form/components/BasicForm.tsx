@@ -1,47 +1,36 @@
-import { styled } from '../../../stitches.config';
-import * as Form from '@radix-ui/react-form';
 import { Input } from '../../common/components/Input';
 import { useFormContext } from 'react-hook-form';
-import { FC } from 'react';
-import { FormLabelText } from '../schema';
+import { ChangeEvent, ComponentProps, FC } from 'react';
+import { FormLabelEnum, FormLabelText } from '../schema';
+import { FormField, FormInput, FormLabel, FormMessage } from '../../common/components/Form';
 
 interface BasicFormProps {
-  label: 'name' | 'phoneNumber' | 'address';
+  label: FormLabelEnum.NAME | FormLabelEnum.PHONENUMBER | FormLabelEnum.ADDRESS;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const BasicForm: FC<BasicFormProps> = ({ label }) => {
+export const BasicForm: FC<BasicFormProps & ComponentProps<typeof Input>> = ({
+  label,
+  onChange,
+  ...props
+}) => {
   const {
     register,
     formState: { errors },
   } = useFormContext();
-  console.log(errors[label]?.message);
 
   return (
     <FormField name={FormLabelText[label]}>
       <FormLabel>{FormLabelText[label]}</FormLabel>
-      <FormControl asChild>
-        <Input {...register(label)} />
-      </FormControl>
+      <FormInput>
+        <Input
+          {...register(label, {
+            onChange,
+          })}
+          {...props}
+        />
+        {errors[label] && <FormMessage message={errors[label]?.message as string} />}
+      </FormInput>
     </FormField>
   );
 };
-
-export const FormField = styled(Form.Field, {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(12, 1fr)',
-  marginBottom: '16px',
-});
-
-export const FormLabel = styled(Form.Label, {
-  gridColumn: '1 / 3',
-  padding: '0 10px',
-
-  fontSize: '16px',
-  fontWeight: 700,
-  lineHeight: '35px',
-  color: '$gray12',
-});
-
-export const FormControl = styled(Form.Control, {
-  gridColumn: '3 / 13',
-});

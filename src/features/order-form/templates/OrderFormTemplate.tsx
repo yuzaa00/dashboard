@@ -7,6 +7,8 @@ import { ItemForm } from '../components/ItemForm';
 import { SupplyForm } from '../components/SupplyForm';
 import { FormLabelEnum, OrderForm, OrderFormSchema } from '../schema';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { PhoneNumberForm } from '../components/PhoneNumberForm';
+import { LoadPlaceForm } from '../components/LoadPlaceForm';
 
 export const OrderFormTemplate = () => {
   const methods = useForm<OrderForm>({ resolver: zodResolver(OrderFormSchema) });
@@ -16,13 +18,14 @@ export const OrderFormTemplate = () => {
     <FormProvider {...methods}>
       <Form.Root onSubmit={methods.handleSubmit(onSubmit)}>
         <BasicForm label={FormLabelEnum.NAME} />
-        <BasicForm label={FormLabelEnum.PHONENUMBER} />
+        <PhoneNumberForm />
         <DateForm />
         <ItemForm />
         <SupplyForm />
         <AddressForm />
+        <LoadPlaceForm />
         <Form.Submit asChild>
-          <button type="submit">등록</button>
+          <button>등록</button>
         </Form.Submit>
       </Form.Root>
     </FormProvider>

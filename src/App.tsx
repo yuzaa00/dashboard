@@ -7,7 +7,7 @@ export const App = () => {
 
   return (
     <>
-      <Header>board</Header>
+      <Header>Board</Header>
       <MainWrapper>
         <MainTemplate />
       </MainWrapper>
@@ -15,9 +15,11 @@ export const App = () => {
   );
 };
 
-const Header = styled('div', {
-  fontSize: '20px',
+const Header = styled('header', {
+  padding: '20px',
+  fontSize: '24px',
   fontWeight: 'bold',
+  color: '$indigo12',
 });
 
 const MainWrapper = styled('main', {
