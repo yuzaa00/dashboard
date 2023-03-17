@@ -8,9 +8,10 @@ import 'react-datepicker/dist/react-datepicker.css';
 interface InputDatePickerProps {
   label: string;
   minDate?: Date;
+  maxDate?: Date;
 }
 
-export const InputDatePicker: FC<InputDatePickerProps> = ({ label, minDate }) => {
+export const InputDatePicker: FC<InputDatePickerProps> = ({ label, minDate, maxDate }) => {
   const { control } = useFormContext();
 
   return (
@@ -21,6 +22,7 @@ export const InputDatePicker: FC<InputDatePickerProps> = ({ label, minDate }) =>
         <DatePicker
           dateFormat="yyyy-MM-dd"
           minDate={minDate}
+          maxDate={maxDate}
           locale={ko}
           selected={value}
           onChange={onChange}
