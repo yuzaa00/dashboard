@@ -28,11 +28,20 @@ export const LoadPlacesForm = () => {
 
 const GridLayout = styled('div', {
   display: 'grid',
-  gridTemplateColumns: `repeat(${MAX_LOAD_PLACES_COUNT}, 1fr)`,
+  gridTemplateColumns: '1fr',
   gap: '10px',
+  marginBottom: '16px',
+
+  '@sm': {
+    gridTemplateColumns: `repeat(${MAX_LOAD_PLACES_COUNT}, 1fr)`,
+  },
 });
 
 const AppendButton = styled('button', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+
   borderRadius: '4px',
   border: 'solid 1px $gray6',
 });

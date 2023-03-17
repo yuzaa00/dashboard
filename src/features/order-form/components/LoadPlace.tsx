@@ -72,4 +72,5 @@ const Header = styled('p', {
   justifyContent: 'space-between',
   fontSize: '18px',
   marginBottom: '12px',
+  fontWeight: 700,
 });

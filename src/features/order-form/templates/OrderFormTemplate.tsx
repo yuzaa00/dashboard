@@ -55,14 +55,30 @@ export const OrderFormTemplate: FC<OrderFormTemplateProps> = ({ formState, setFo
 
 const OrderFormGridLayout = styled('div', {
   display: 'grid',
-  gridTemplateColumns: 'repeat(12, 1fr)',
+  gridTemplateRows: 'auto 1fr',
   gap: '16px',
+
+  '@lg': {
+    gridTemplateColumns: 'repeat(12, 1fr)',
+  },
 });
 
 const BasicFormGridLayout = styled('div', {
-  gridColumn: '1 / 6',
+  gridColumn: '1',
+  gridRow: '1 / 2',
+
+  '@lg': {
+    gridColumn: '1 / 6',
+    gridRow: '1',
+  },
 });
 
 const LoadPlaceFormGridLayout = styled('div', {
-  gridColumn: '6 / 13',
+  gridColumn: '1',
+  gridRow: '2 / 3',
+
+  '@lg': {
+    gridColumn: '6 / 13',
+    gridRow: '1',
+  },
 });
