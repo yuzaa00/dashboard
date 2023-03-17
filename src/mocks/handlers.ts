@@ -12,7 +12,7 @@ const getOrders: Parameters<typeof rest.get>[1] = async (_, res, ctx) => {
   const response = await fetch('timf_front_mock_table_list.json');
   const data = await response.json();
 
-  return res(ctx.status(200), ctx.json({ orders: data }));
+  return res(ctx.status(200), ctx.json(data));
 };
 
 const postOrder: Parameters<typeof rest.post>[1] = async (req, res, ctx) => {
