@@ -9,6 +9,10 @@ export const { styled, globalCss, keyframes } = createStitches({
       ...blackA,
     },
   },
+  media: {
+    sm: '(min-width: 640px)',
+    lg: '(min-width: 1024px)',
+  },
 });
 
 export const globalStyles = globalCss({

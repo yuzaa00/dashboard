@@ -113,32 +113,34 @@ export const Table: FC<TableProps> = ({ data, columns, onDeleteClick, onCopyClic
             ))}
           </Select>
         </VStack>
-        <StyledTable>
-          <thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <StyledTh key={header.id} colSpan={header.colSpan}>
-                    {header.isPlaceholder ? null : (
-                      <>{flexRender(header.column.columnDef.header, header.getContext())}</>
-                    )}
-                  </StyledTh>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <StyledTd key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </StyledTd>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </StyledTable>
+        <TableLayout>
+          <StyledTable>
+            <thead>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <StyledTh key={header.id} colSpan={header.colSpan}>
+                      {header.isPlaceholder ? null : (
+                        <>{flexRender(header.column.columnDef.header, header.getContext())}</>
+                      )}
+                    </StyledTh>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map((cell) => (
+                    <StyledTd key={cell.id}>
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </StyledTd>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </StyledTable>
+        </TableLayout>
         <VStack css={{ alignSelf: 'center' }}>
           <Pagination>
             <button onClick={() => table.setPageIndex(0)} disabled={!table.getCanPreviousPage()}>
@@ -184,9 +186,14 @@ const IndeterminateCheckbox = ({
   return <input type="checkbox" ref={ref} className={className + ' cursor-pointer'} {...rest} />;
 };
 
+const TableLayout = styled('div', {
+  overflow: 'scroll',
+});
+
 const StyledTable = styled('table', {
   borderSpacing: 0,
   width: '100%',
+  minWidth: 'max-content',
 });
 
 const StyledTh = styled('th', {
