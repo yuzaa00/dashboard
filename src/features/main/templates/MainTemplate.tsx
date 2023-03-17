@@ -9,7 +9,7 @@ export const MainTemplate = () => {
 
   return (
     <VStack>
-      <OrderFormTemplate formState={formState} setFormState={setFormState} />
+      <OrderFormTemplate formState={formState} />
       <OrderTableTemplate setFormState={setFormState} />
     </VStack>
   );

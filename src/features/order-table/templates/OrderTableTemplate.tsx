@@ -5,6 +5,7 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 import { Modal, ModalContent } from '../../common/components/Modal';
 import { Loading } from '../../order-form/components/Loading';
 import { OrderForm } from '../../order-form/schema';
+import { styled } from '../../../stitches.config';
 
 interface OrderTableTemplateProps {
   setFormState: (form: OrderForm) => void;
@@ -60,8 +61,8 @@ export const OrderTableTemplate: FC<OrderTableTemplateProps> = ({ setFormState }
           {mutation.isLoading && <Loading />}
           {mutation.isSuccess && (
             <>
-              <p>삭제가 완료되었습니다.</p>
-              {`[${mutation.data}]`}
+              <MainText>삭제가 완료되었습니다.</MainText>
+              <SubText>{`[${mutation.data}]`}</SubText>
             </>
           )}
         </div>
@@ -69,3 +70,13 @@ export const OrderTableTemplate: FC<OrderTableTemplateProps> = ({ setFormState }
     </Modal>
   );
 };
+
+const MainText = styled('p', {
+  fontWeight: 500,
+  fontSize: '18px',
+  marginBottom: '8px',
+});
+
+const SubText = styled('p', {
+  wordBreak: 'break-all',
+});
