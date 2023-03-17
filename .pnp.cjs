@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@radix-ui/react-icons", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.0"],\
             ["@stitches/react", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.8"],\
             ["@tanstack/react-query", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.26.1"],\
+            ["@tanstack/react-table", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:8.7.9"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-datepicker", "npm:4.10.0"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -1459,6 +1460,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@tanstack/react-table", [\
+        ["npm:8.7.9", {\
+          "packageLocation": "./.yarn/cache/@tanstack-react-table-npm-8.7.9-a8ac610919-3c704ac903.zip/node_modules/@tanstack/react-table/",\
+          "packageDependencies": [\
+            ["@tanstack/react-table", "npm:8.7.9"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:8.7.9", {\
+          "packageLocation": "./.yarn/__virtual__/@tanstack-react-table-virtual-f0f2b8a001/0/cache/@tanstack-react-table-npm-8.7.9-a8ac610919-3c704ac903.zip/node_modules/@tanstack/react-table/",\
+          "packageDependencies": [\
+            ["@tanstack/react-table", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:8.7.9"],\
+            ["@tanstack/table-core", "npm:8.7.9"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tanstack/table-core", [\
+        ["npm:8.7.9", {\
+          "packageLocation": "./.yarn/cache/@tanstack-table-core-npm-8.7.9-12d32ed77f-78d2314928.zip/node_modules/@tanstack/table-core/",\
+          "packageDependencies": [\
+            ["@tanstack/table-core", "npm:8.7.9"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@tootallnate/once", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-2.0.0-e36cf4f140-ad87447820.zip/node_modules/@tootallnate/once/",\
@@ -2538,6 +2575,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@radix-ui/react-icons", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.0"],\
             ["@stitches/react", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.8"],\
             ["@tanstack/react-query", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.26.1"],\
+            ["@tanstack/react-table", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:8.7.9"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-datepicker", "npm:4.10.0"],\
             ["@types/react-dom", "npm:18.0.11"],\
