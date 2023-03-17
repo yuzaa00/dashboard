@@ -1,3 +1,4 @@
+import { PlusIcon } from '@radix-ui/react-icons';
 import { Fragment } from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 import { styled } from '../../../stitches.config';
@@ -17,9 +18,9 @@ export const LoadPlacesForm = () => {
         </Fragment>
       ))}
       {fields.length < MAX_LOAD_PLACES_COUNT && (
-        <button type="button" onClick={() => append({})}>
-          append
-        </button>
+        <AppendButton type="button" onClick={() => append({})}>
+          <PlusIcon width={20} height={20} />
+        </AppendButton>
       )}
     </GridLayout>
   );
@@ -29,4 +30,9 @@ const GridLayout = styled('div', {
   display: 'grid',
   gridTemplateColumns: `repeat(${MAX_LOAD_PLACES_COUNT}, 1fr)`,
   gap: '10px',
+});
+
+const AppendButton = styled('button', {
+  borderRadius: '4px',
+  border: 'solid 1px $gray6',
 });
