@@ -1,0 +1,15 @@
+export const formMessages = {
+  REQUIRED: '내용을 채워주세요.',
+  VALID_ONLY_NUMBER: '숫자만 입력 가능합니다.',
+  VALID_ONLY_KOREAN: '한글만 입력 가능합니다.',
+  NAME_INVALID: '한글, 영문, 공백만 사용할 수 있어요.',
+  TEL_INVALID: '알맞은 핸드폰 번호 형식을 입력해주세요.',
+  FROMDATE_REQUIRED: '시작 날짜를 입력해주세요.',
+  TODATE_REQUIRED: '종료 날짜를 입력해주세요.',
+  ITEM_REQUIRED: '품목을 입력해주세요.',
+  ITEM_DETAIL_REQUIRED: '품목 상세를 입력해주세요.',
+  SUPPLY_DETAIL_REQUIRED: '물량 상세를 입력해주세요.',
+  SUPPLY_DETAIL_INVALID: '1개 이상부터 입력 가능해요.',
+  SUPPLY_DETAIL_TYPE_INVALID: '숫자만 입력 가능해요.',
+  ADDRESS_REQUIRED: '주소를 입력해 주세요.',
+};

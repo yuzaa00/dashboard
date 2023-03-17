@@ -28,9 +28,9 @@ export interface Order {
   name: string;
   /** 휴대폰 번호 */
   phoneNumber: string;
-  /** 시작 날짜 (null?) */
+  /** 시작 날짜 */
   fromDate: string;
-  /** 끝 날짜 (null?) */
+  /** 끝 날짜 */
   toDate: string;
   /** 품목 (셀렉 박스) */
   item: string;
