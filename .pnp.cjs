@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@radix-ui/react-form", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.0.2"],\
             ["@radix-ui/react-icons", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.0"],\
             ["@stitches/react", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.8"],\
+            ["@tanstack/react-query", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.26.1"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-datepicker", "npm:4.10.0"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -1417,6 +1418,47 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@tanstack/query-core", [\
+        ["npm:4.26.1", {\
+          "packageLocation": "./.yarn/cache/@tanstack-query-core-npm-4.26.1-b4ec767cdf-c7bc751d7d.zip/node_modules/@tanstack/query-core/",\
+          "packageDependencies": [\
+            ["@tanstack/query-core", "npm:4.26.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tanstack/react-query", [\
+        ["npm:4.26.1", {\
+          "packageLocation": "./.yarn/cache/@tanstack-react-query-npm-4.26.1-1d638817b0-3b43a5acc8.zip/node_modules/@tanstack/react-query/",\
+          "packageDependencies": [\
+            ["@tanstack/react-query", "npm:4.26.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.26.1", {\
+          "packageLocation": "./.yarn/__virtual__/@tanstack-react-query-virtual-ab1ebb98a8/0/cache/@tanstack-react-query-npm-4.26.1-1d638817b0-3b43a5acc8.zip/node_modules/@tanstack/react-query/",\
+          "packageDependencies": [\
+            ["@tanstack/react-query", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.26.1"],\
+            ["@tanstack/query-core", "npm:4.26.1"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["@types/react-dom", "npm:18.0.11"],\
+            ["@types/react-native", null],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:18.2.0"],\
+            ["react-native", null],\
+            ["use-sync-external-store", "virtual:ab1ebb98a88bf36e88bcc378ec8d75124d5d0473d5ac9de556cd5f9f22168e7c36964a40097fd69035df233234294bbd67f1d335ef1440255ade09cd89091394#npm:1.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-native",\
+            "@types/react",\
+            "react-dom",\
+            "react-native",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@tootallnate/once", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-2.0.0-e36cf4f140-ad87447820.zip/node_modules/@tootallnate/once/",\
@@ -2495,6 +2537,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@radix-ui/react-form", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.0.2"],\
             ["@radix-ui/react-icons", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.0"],\
             ["@stitches/react", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:1.2.8"],\
+            ["@tanstack/react-query", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:4.26.1"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-datepicker", "npm:4.10.0"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -6355,6 +6398,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["detect-node-es", "npm:1.1.0"],\
             ["react", "npm:18.2.0"],\
             ["tslib", "npm:2.5.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["use-sync-external-store", [\
+        ["npm:1.2.0", {\
+          "packageLocation": "./.yarn/cache/use-sync-external-store-npm-1.2.0-44f75d2564-5c639e0f8d.zip/node_modules/use-sync-external-store/",\
+          "packageDependencies": [\
+            ["use-sync-external-store", "npm:1.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:ab1ebb98a88bf36e88bcc378ec8d75124d5d0473d5ac9de556cd5f9f22168e7c36964a40097fd69035df233234294bbd67f1d335ef1440255ade09cd89091394#npm:1.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/use-sync-external-store-virtual-781429b1ca/0/cache/use-sync-external-store-npm-1.2.0-44f75d2564-5c639e0f8d.zip/node_modules/use-sync-external-store/",\
+          "packageDependencies": [\
+            ["use-sync-external-store", "virtual:ab1ebb98a88bf36e88bcc378ec8d75124d5d0473d5ac9de556cd5f9f22168e7c36964a40097fd69035df233234294bbd67f1d335ef1440255ade09cd89091394#npm:1.2.0"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["react", "npm:18.2.0"]\
           ],\
           "packagePeers": [\
             "@types/react",\
