@@ -10,6 +10,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { PhoneNumberForm } from '../components/PhoneNumberForm';
 import { LoadPlacesForm } from '../components/LoadPlacesForm';
 import { styled } from '../../../stitches.config';
+import { Button } from '../../common/components/Button';
 
 export const OrderFormTemplate = () => {
   const methods = useForm<OrderForm>({
@@ -38,7 +39,7 @@ export const OrderFormTemplate = () => {
           </LoadPlaceFormGridLayout>
         </OrderFormGridLayout>
         <Form.Submit asChild>
-          <button>등록</button>
+          <Button>등록</Button>
         </Form.Submit>
       </Form.Root>
     </FormProvider>

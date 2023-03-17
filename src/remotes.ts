@@ -8,8 +8,8 @@ export function postOrder(data: Order) {
   return http.post<Order>('/order', data);
 }
 
-export function deleteOrder(data: Pick<Order, 'seqNo'>) {
-  return http.delete<Pick<Order, 'seqNo'>>('/order', data);
+export function deleteOrder(data: number[]) {
+  return http.delete<number[]>('/order', data);
 }
 
 export interface LoadPlace {
