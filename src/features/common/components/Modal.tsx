@@ -11,7 +11,15 @@ export const ModalContent = forwardRef<HTMLDivElement, ContentProps>(
     <DialogPrimitive.Portal>
       <Overlay />
       <Content {...props} ref={forwardRef}>
-        <DialogPrimitive.Close aria-label="Close">
+        <DialogPrimitive.Close
+          aria-label="Close"
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'end',
+            marginBottom: '8px',
+          }}
+        >
           <Cross1Icon />
         </DialogPrimitive.Close>
         {children}

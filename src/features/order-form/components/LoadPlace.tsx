@@ -44,17 +44,17 @@ export const LoadPlace: FC<LoadPlaceProps> = ({ index, fieldName, remove }) => {
           )}
         </FormInput>
       </FormField>
-      <AddressModal formValue={`${fieldName}.${index}.address`}>
-        <FormField name="상차지" display="flex">
-          <FormLabel display="flex">상차지</FormLabel>
-          <FormInput display="flex">
+      <FormField name="상차지" display="flex">
+        <FormLabel display="flex">상차지</FormLabel>
+        <FormInput display="flex">
+          <AddressModal formValue={`${fieldName}.${index}.address`}>
             <Input {...register(`${fieldName}.${index}.address`, {})} readOnly />
-            {errors[fieldName]?.[index]?.address && (
-              <FormMessage message={errors[fieldName]?.[index]?.address?.message as string} />
-            )}
-          </FormInput>
-        </FormField>
-      </AddressModal>
+          </AddressModal>
+          {errors[fieldName]?.[index]?.address && (
+            <FormMessage message={errors[fieldName]?.[index]?.address?.message as string} />
+          )}
+        </FormInput>
+      </FormField>
     </GridLayout>
   );
 };

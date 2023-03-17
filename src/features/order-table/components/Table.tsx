@@ -6,6 +6,7 @@ import {
   getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table';
+import type { RowSelectionState } from '@tanstack/react-table';
 import { styled } from '../../../stitches.config';
 import { VStack } from '../../common/components/Stack';
 import { Select } from '../../common/components/Select';
@@ -30,9 +31,9 @@ export const Table: FC<TableProps> = ({ data, columns, onDeleteClick, onCopyClic
         header: ({ table }: any) => (
           <IndeterminateCheckbox
             {...{
-              checked: table.getIsAllRowsSelected(),
+              checked: table.getIsAllPageRowsSelected(),
               indeterminate: table.getIsSomeRowsSelected(),
-              onChange: table.getToggleAllRowsSelectedHandler(),
+              onChange: table.getToggleAllPageRowsSelectedHandler(),
             }}
           />
         ),
@@ -143,17 +144,38 @@ export const Table: FC<TableProps> = ({ data, columns, onDeleteClick, onCopyClic
         </TableLayout>
         <VStack css={{ alignSelf: 'center' }}>
           <Pagination>
-            <button onClick={() => table.setPageIndex(0)} disabled={!table.getCanPreviousPage()}>
+            <button
+              onClick={() => {
+                table.setPageIndex(0);
+                table.resetRowSelection();
+              }}
+              disabled={!table.getCanPreviousPage()}
+            >
               {'<<'}
             </button>
-            <button onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>
+            <button
+              onClick={() => {
+                table.resetRowSelection();
+                table.previousPage();
+              }}
+              disabled={!table.getCanPreviousPage()}
+            >
               {'<'}
             </button>
-            <button onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>
+            <button
+              onClick={() => {
+                table.nextPage();
+                table.resetRowSelection();
+              }}
+              disabled={!table.getCanNextPage()}
+            >
               {'>'}
             </button>
             <button
-              onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+              onClick={() => {
+                table.resetRowSelection();
+                table.setPageIndex(table.getPageCount() - 1);
+              }}
               disabled={!table.getCanNextPage()}
             >
               {'>>'}
