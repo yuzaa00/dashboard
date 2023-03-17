@@ -11,10 +11,17 @@ import { PhoneNumberForm } from '../components/PhoneNumberForm';
 import { LoadPlacesForm } from '../components/LoadPlacesForm';
 import { styled } from '../../../stitches.config';
 import { Button } from '../../common/components/Button';
+import { FC } from 'react';
 
-export const OrderFormTemplate = () => {
+interface OrderFormTemplateProps {
+  formState?: OrderForm;
+  setFormState: (form: OrderForm) => void;
+}
+
+export const OrderFormTemplate: FC<OrderFormTemplateProps> = ({ formState, setFormState }) => {
   const methods = useForm<OrderForm>({
     resolver: zodResolver(OrderFormSchema),
+    values: formState,
     defaultValues: {
       loadPlace: [{ name: '', address: '' }],
     },
