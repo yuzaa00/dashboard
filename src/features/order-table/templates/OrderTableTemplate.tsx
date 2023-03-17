@@ -1,11 +1,16 @@
-import { useMemo, useState } from 'react';
+import { FC, useMemo, useState } from 'react';
 import { deleteOrder, getOrders } from '../../../remotes';
 import { Table } from '../components/Table';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { Modal, ModalContent } from '../../common/components/Modal';
 import { Loading } from '../../order-form/components/Loading';
+import { OrderForm } from '../../order-form/schema';
 
-export const OrderTableTemplate = () => {
+interface OrderTableTemplateProps {
+  setFormState: (form: OrderForm) => void;
+}
+
+export const OrderTableTemplate: FC<OrderTableTemplateProps> = ({ setFormState }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const { data: orders } = useQuery({ queryKey: ['orders'], queryFn: getOrders });
@@ -24,13 +29,8 @@ export const OrderTableTemplate = () => {
     ];
 
     const tableData = orders?.map((order) => ({
-      seqNo: order.seqNo,
-      name: order.name,
-      phoneNumber: order.phoneNumber,
+      ...order,
       date: `${order.fromDate} ~ ${order.toDate}`,
-      item: order.item,
-      supply: order.supply,
-      address: order.address,
     }));
 
     return [columns, tableData];
@@ -49,7 +49,12 @@ export const OrderTableTemplate = () => {
 
   return (
     <Modal open={isModalOpen} onOpenChange={setModalOpen}>
-      <Table data={tableData} columns={columns} onDeleteClick={handleDeleteClick} />
+      <Table
+        data={tableData}
+        columns={columns}
+        onDeleteClick={handleDeleteClick}
+        onCopyClick={setFormState}
+      />
       <ModalContent>
         <div>
           {mutation.isLoading && <Loading />}

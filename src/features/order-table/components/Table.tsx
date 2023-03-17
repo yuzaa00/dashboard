@@ -10,14 +10,17 @@ import { styled } from '../../../stitches.config';
 import { VStack } from '../../common/components/Stack';
 import { Select } from '../../common/components/Select';
 import { Button } from '../../common/components/Button';
+import { OrderForm } from '../../order-form/schema';
+import _default from 'react-hook-form/dist/logic/appendErrors';
 
 interface TableProps {
   data: any;
   columns: any;
   onDeleteClick: (selectedRows: number[]) => void;
+  onCopyClick: (form: OrderForm) => void;
 }
 
-export const Table: FC<TableProps> = ({ data, columns, onDeleteClick }) => {
+export const Table: FC<TableProps> = ({ data, columns, onDeleteClick, onCopyClick }) => {
   const [rowSelection, setRowSelection] = useState({});
 
   const basicColumns = useMemo(
@@ -45,7 +48,23 @@ export const Table: FC<TableProps> = ({ data, columns, onDeleteClick }) => {
         ),
       },
       ...columns,
-      { id: 'copyOrder', header: '오더 복사', cell: <button>오더 복사</button> },
+      {
+        id: 'copyOrder',
+        header: '오더 복사',
+        cell: ({ row }: any) => {
+          const formData = {
+            ...row.original,
+            fromDate: new Date(row.original.fromDate),
+            toDate: new Date(row.original.toDate),
+            loadPlace: row.original.loadPlace.map((place: any) => ({
+              ...place,
+              date: new Date(place.date),
+            })),
+          };
+
+          return <button onClick={() => onCopyClick(formData)}>오더 복사</button>;
+        },
+      },
     ],
     [],
   );
@@ -175,6 +194,8 @@ const StyledTh = styled('th', {
   backgroundColor: '$gray7',
   borderBottom: 'solid 1px $colors$gray6',
   height: '20px',
+  fontWeight: 700,
+  color: '$indigo12',
 
   '&:first-child': {
     borderLeft: 'solid 1px $colors$gray6',
