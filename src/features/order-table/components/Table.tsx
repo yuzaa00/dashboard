@@ -2,19 +2,22 @@ import { FC, HTMLProps, useEffect, useMemo, useRef, useState } from 'react';
 import {
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   getPaginationRowModel,
   useReactTable,
 } from '@tanstack/react-table';
 import { styled } from '../../../stitches.config';
 import { VStack } from '../../common/components/Stack';
 import { Select } from '../../common/components/Select';
+import { Button } from '../../common/components/Button';
 
 interface TableProps {
   data: any;
   columns: any;
+  onDeleteClick: (selectedRows: number[]) => void;
 }
 
-export const Table: FC<TableProps> = ({ data, columns }) => {
+export const Table: FC<TableProps> = ({ data, columns, onDeleteClick }) => {
   const [rowSelection, setRowSelection] = useState({});
 
   const basicColumns = useMemo(
@@ -59,13 +62,24 @@ export const Table: FC<TableProps> = ({ data, columns }) => {
     enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
-    debugAll: true,
   });
 
   return (
     <>
       <VStack css={{ gap: '10px' }}>
+        <VStack css={{ alignSelf: 'end' }}>
+          <Button
+            onClick={() =>
+              onDeleteClick(
+                table.getSelectedRowModel().flatRows.map((row: any) => row.original.seqNo),
+              )
+            }
+          >
+            삭제
+          </Button>
+        </VStack>
         <VStack css={{ alignSelf: 'end' }}>
           <Select
             value={table.getState().pagination.pageSize}
